@@ -1,0 +1,154 @@
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f49d;
+}
+ul{
+    padding: 0%;
+    margin: 0%;
+}
+.button_1{
+    height: 38px;
+    background: #aa1212;
+    border: 0px;
+    padding: 0 20px 0 20px;
+    color: #ffffff;
+}
+/* Anything in the container class will globally have a width of 80%
+    a margin that is responsive and the overflow wont be seen */
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.dark{
+    padding: 15px;
+    background: #002f4d;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*Header*/
+header{
+    background: #002f4d;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #aa1212 3px solid;
+}
+/* The header links are white, with no underline and all uppercase
+*/
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* Make the links in the menu inline with a left and right padding per item in the list
+*/
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #brand{
+    float: left;
+}
+header #brand h1{
+    margin: 0;
+}
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color: #aa1212;
+    font-weight: bold;
+}
+header a:hover{
+    color:#cccccc;
+    font-weight: bold;
+}
+
+/*ShowCase*/
+#banner{
+    min-height: 700px;
+    /*The 0-400px moves the image up 400 pix*/
+    background: url('../img/snow-forrest.jpg') no-repeat 0 -600px;
+    text-align: center;
+    color: white;
+}
+#banner h1{
+    margin-top: 75px;
+    margin-bottom: 100px;
+    font-size: 55px;
+}
+#banner p{
+    font-size: 20px;
+}
+
+/*Boxes*/
+#boxes{
+    margin-top: 20px;
+}
+#boxes .box{
+    float: left;
+    text-align: center;
+    width:30%;
+    padding: 10px;
+}
+#boxes .box img{
+    width: 90px;
+}
+/*Side bar*/
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+/*Main col*/
+article#main-col{
+    float:left;
+    width:65%;
+}
+/*Project List*/
+ul#projet-list li{
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #002f4d;
+    text-align: center;
+    border-top: #aa1212 3px solid;
+}
+/*Media Query/responsiveness*/
+ @media(max-width: 768px){
+     /*The following is just to remove the float if the screen
+     reduces in size. It removes the banner, the nav bar, the boxes and the 
+     about me page's float align. 
+     */
+     header #brand,
+     header nav,
+     header nav li,
+     #boxes .box,
+     article#main-col,
+     aside#sidebar{
+         float: none;
+         text-align: center;
+         width: 100%
+     }
+     header{
+         padding-bottom: 20px;
+     }
+     #banner h1{
+         margin-top: 40px;
+     }
+ }
