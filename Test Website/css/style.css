@@ -74,14 +74,15 @@ header a:hover{
 
 /*ShowCase*/
 #banner{
-    min-height: 700px;
+    min-height: 100%;
     /*The 0-400px moves the image up 400 pix*/
-    background: url('../img/snow-forrest.jpg') no-repeat 0 -600px;
+    background: url('../img/indexbg.jpg') no-repeat;
+    /* background: url('../img/snow-forrest.jpg') no-repeat 0 -600px; */
     text-align: center;
     color: white;
 }
 #banner h1{
-    margin-top: 75px;
+    margin-top: 100px;
     margin-bottom: 100px;
     font-size: 55px;
 }
@@ -90,6 +91,10 @@ header a:hover{
 }
 
 /*Boxes*/
+#boxes h2{
+	text-align: center;
+	text-color: black;
+}
 #boxes{
     margin-top: 20px;
 }
@@ -121,6 +126,31 @@ ul#projet-list li{
     margin-bottom: 5px;
     background: #e6e6e6;
 }
+/*Button One*/
+.project-button {
+    padding:15px 50px;
+    outline: none;
+    background-color: #002f4d;
+    border: none;
+    border-radius:5px;
+    box-shadow: 0 9px #aa1212;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  
+  .project-button:hover{
+    background-color: rgba(13, 66, 99, 0.68);
+  }
+  
+  .project-button:active {
+    background-color: #002f4d;
+    box-shadow: 0 5px #aa1212;
+    transform: translateY(4px);
+  }
+  
 footer{
     padding: 20px;
     margin-top: 20px;
