@@ -74,13 +74,39 @@ header a:hover{
 
 /*ShowCase*/
 #banner{
-    min-height: 100%;
-    /*The 0-400px moves the image up 400 pix*/
-    background: url('../img/indexbg.jpg') no-repeat;
-    /* background: url('../img/snow-forrest.jpg') no-repeat 0 -600px; */
-    text-align: center;
-    color: white;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
 }
+#banner .layer {
+    min-height: 800px;
+  }
+  .layer-bg {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg");
+  }
+  
+  .layer-1 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png\a");
+    background-position: left bottom;
+  }
+  
+  .layer-2 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png");
+  }
+  
+  .layer-3 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png\a");
+    background-position: right bottom;
+  }
+  
+  .layer-4 {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png\a");
+  }
+  
+  .layer-overlay {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png\a");
+  }
+  
 #banner h1{
     margin-top: 100px;
     margin-bottom: 100px;
