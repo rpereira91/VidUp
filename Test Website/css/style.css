@@ -78,7 +78,16 @@ header a:hover{
     overflow: hidden;
     position: relative;
 }
-#banner .layer {
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  z-index: -1;
+}
+#banner, .layer {
     min-height: 800px;
   }
   .layer-bg {
