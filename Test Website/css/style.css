@@ -74,57 +74,60 @@ header a:hover{
 
 /*ShowCase*/
 #banner{
-    height: 800px;
-    overflow: hidden;
-    position: relative;
+    background: url('../img/indexbg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+    text-align: center;
+    min-height: 700px;
 }
-.layer {
-  background-position: bottom center;
-  background-size: auto;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 800px;
-  position: fixed;
-  z-index: -1;
-}
-#banner, .layer {
-    min-height: 800px;
-  }
-  .layer-bg {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_bg.jpg");
-  }
-  
-  .layer-1 {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_03.png\a");
-    background-position: left bottom;
-  }
-  
-  .layer-2 {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_02.png");
-  }
-  
-  .layer-3 {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_man.png\a");
-    background-position: right bottom;
-  }
-  
-  .layer-4 {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_01.png\a");
-  }
-  
-  .layer-overlay {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/272781/ilu_overlay.png\a");
-  }
-  
 #banner h1{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-size: 55px;
+    font-family: "Advent Pro", sans-serif;
+    font-size: 96px;
+    color: #000;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 90px;
+    margin-top: 60px;
 }
-#banner p{
-    font-size: 20px;
+#banner h1:after {
+    border-bottom: 1px solid #aaa;
+  }
+#banner h5{
+    font-size: 16px;
+    color: #555;
 }
-
+/* Media queries  */
+@media screen and (min-width: 768px) {
+    #banner h1 {
+      font-size: 120px;
+      line-height: 114px;
+    }
+    #banner h5 {
+      font-size: 19px;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    #banner h1 {
+      font-size: 132px;
+      margin-top: 70px;
+    }
+    #banner h5 {
+      font-size: 21px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    #banner h1 {
+      font-size: 142px;
+      line-height: 124px;
+    }
+    #banner h5 {
+      font-size: 24px;
+    }
+  }
+  
 /*Boxes*/
 #boxes h2{
 	text-align: center;
@@ -217,3 +220,4 @@ footer{
          margin-top: 40px;
      }
  }
+ 
