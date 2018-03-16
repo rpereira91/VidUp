@@ -1,0 +1,12 @@
+
+/*Side bar*/
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+/*Main col*/
+article#main-col{
+    float:left;
+    width:65%;
+}
