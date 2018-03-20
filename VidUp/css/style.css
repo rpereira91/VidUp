@@ -1,12 +1,42 @@
+article #overall-main{
+	height:100%;
+	width:100%;
+	background-color:orange;
+}
 
+article#main{
+	max-height:80%;
+	height:80%;
+	width:100%;
+	background-color:blue;
+}
 /*Side bar*/
-aside#sidebar{
+article#sidebar{
+	background-color:red;
+	top:0px;
     float: right;
     width: 30%;
-    margin-top: 10px;
+    height: 100%;
 }
-/*Main col*/
-article#main-col{
+/*Video View*/
+article#video-view{
     float:left;
-    width:65%;
+    background-color:yellow;
+	width: 70%;
+	height: 100%;
 }
+/*Sequence Editor*/
+article#sequence-editor{
+    position: absolute;
+    bottom: 0px;
+	height:20%;
+    width: 99%;
+    border: 3px solid #8AC007;
+    background-color:green;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

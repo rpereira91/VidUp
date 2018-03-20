@@ -4,6 +4,7 @@ const dialog = electron.dialog;
 const url = require('url');
 const path = require('path');
 const fs = require('fs');
+//const smalltalk = require('smalltalk');
 const{app,BrowserWindow, Menu} = electron;
 
 let mainWindow;
@@ -49,6 +50,7 @@ const mainMenuTemplate =  [
           click(){
             //CODE TODO
             createNewWindow();
+            dialog.showErrorBox("New project started!","New project");
           }
         },
         {
@@ -57,6 +59,7 @@ const mainMenuTemplate =  [
           click(){
             //CODE TODO
             createOpenWindow();  
+            dialog.showErrorBox("File Opened!","Opened previous projec");
         }
         },
         {
@@ -65,6 +68,7 @@ const mainMenuTemplate =  [
           click(){
             //CODE TODO
             createNewWindow();
+            dialog.showErrorBox("File Saved!","Saved file");
           }
         },
         {
@@ -73,13 +77,19 @@ const mainMenuTemplate =  [
           click(){
             //CODE TODO
             createOpenWindow();  
+            dialog.showErrorBox("Video imported!","The imported video will be added to the sequence editor");
           }
         },
         {
             label:'Export Video',
             click(){
               //CODE TODO
+              dialog.showMessageBox({ type: "info",
+              message: "Select Video Preset",
+              buttons: ["Hi-Res","Space-saving","Facebook","Instagram","YouTube","GIF"],
+              detail: "Select one of the following pre-sets for the video" });
               createNewWindow();
+              dialog.showErrorBox("Video Exported!","The exported video will be created in the seclected directory.");
             }
           },
         {
@@ -98,12 +108,20 @@ const mainMenuTemplate =  [
             accelerator: 'Ctrl+Z',
             click(){
               //CODE TODO
+              dialog.showMessageBox({ type: "info",
+                message: "Undo move",
+                buttons: ["OK","Other"],
+                detail: "Undo the last move\nImported files will be deleted, trimmed clips will be undone, etc" });
             }
           },
           {
             label:'Redo',
             accelerator: 'Ctrl+Y',
             click(){
+              dialog.showMessageBox({ type: "info",
+                message: "Redo undid move",
+                buttons: ["OK"],
+                detail: "Re do what was undone" });
               //CODE TODO
             }
           }
@@ -114,6 +132,10 @@ const mainMenuTemplate =  [
           {
             label:'Select',
             click(){
+              dialog.showMessageBox({ type: "info",
+                message: "\"Select\" tool selected",
+                buttons: ["OK"],
+                detail: "The select tool can be used to select video clips, re-arrange the order of videos, and navigate through a video" });
               //CODE TODO
             }
           },
