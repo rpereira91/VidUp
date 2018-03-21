@@ -12,7 +12,7 @@ import { Video } from '../../models/video'
 export class SequenceEditorComponent implements OnInit, AfterViewInit {
     @Output() onSelected =  new EventEmitter<Video>();
   videos: Video[];
-
+  vid: number = 1;
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
@@ -20,6 +20,7 @@ export class SequenceEditorComponent implements OnInit, AfterViewInit {
         this.createVideo('3xbmnYHhIr0'),
         this.createVideo('kzlUyrccbos'),
         this.createVideo('TdjAJeUy0zM'),
+        this.createVideo('p2HmeaM8XsM'),
         this.createVideo('p2HmeaM8XsM'),
         this.createVideo('K9u8zFVjX1g')
       ]
@@ -32,7 +33,12 @@ export class SequenceEditorComponent implements OnInit, AfterViewInit {
   public select(video: Video){
       this.onSelected.emit(video);
   }
-
+  public addVideo(){
+    this.vid += 1;
+  }
+  public deleteVideo(){
+    this.vid -= 1;
+  }
   public createVideo(id: String): Video{
     return {
         'url': this.sanitizer.bypassSecurityTrustResourceUrl(`https://youtube.com/embed/${id}`),
