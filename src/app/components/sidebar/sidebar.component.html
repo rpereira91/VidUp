@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngFor="let section of sections" class="section">
+    <div class="section-title">{{section.title}}</div>
+    <div class="section-row" *ngFor="let row of section.rows">
+      <div class="icon">
+        <i class="material-icons">{{row.icon}}</i>
+      </div>
+      <div class="row-title">
+        {{row.title}}
+      </div>
+    </div>
+  </div>
+</div>

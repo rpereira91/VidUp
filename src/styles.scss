@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~material-design-icons-iconfont/dist/material-design-icons.css";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #212121;
+  color: #F5F5F5;
+}
