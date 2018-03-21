@@ -13,30 +13,42 @@ export class SequenceEditorComponent implements OnInit, AfterViewInit {
     @Output() onSelected =  new EventEmitter<Video>();
   videos: Video[];
   vid: number = 1;
+  currentVid: number = 0;
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
       this.videos = [
-        this.createVideo('3xbmnYHhIr0'),
-        this.createVideo('kzlUyrccbos'),
-        this.createVideo('TdjAJeUy0zM'),
-        this.createVideo('p2HmeaM8XsM'),
-        this.createVideo('kN1Czs0m1SU')
+        this.createVideo('SzJ46YA_RaA'),
+        this.createVideo('cSVDk-ugAQs'),
+        this.createVideo('i5qpS_D8Law'),
+        this.createVideo('KtvwustmEDI'),
+        this.createVideo('mP4AWwp-5qY')
       ]
   }
 
   ngAfterViewInit(){
-    this.select(this.videos[0]);
+    this.select(this.videos[this.currentVid]);
   }
-
+  public nextVideo(){
+      this.currentVid+= 1;
+    this.onSelected.emit(this.videos[this.currentVid]);
+  }
+  public prevVideo(){
+    this.currentVid-= 1;
+    this.onSelected.emit(this.videos[this.currentVid]);
+  }
   public select(video: Video){
       this.onSelected.emit(video);
   }
   public addVideo(){
-    this.vid += 1;
+    if(this.vid <= 5){
+      this.vid += 1;
+    }
   }
   public deleteVideo(){
-    this.vid -= 1;
+    if(this.vid > 0){
+      this.vid -= 1;
+    }
   }
   public createVideo(id: String): Video{
     return {

@@ -20,10 +20,4 @@ export class VideoComponent implements OnInit {
     //   {'url': 'https://www.youtube.com/embed/kzlUyrccbos', 'title': ''}
     // ];
   }
-
-  //   public getRandomVideoUrl(): SafeResourceUrl {
-  //     let index = Math.floor(Math.random() * this.videos.length);
-  //     return this.sanitizer.bypassSecurityTrustResourceUrl(
-  //         this.videos[index].url);
-  //   }
 }

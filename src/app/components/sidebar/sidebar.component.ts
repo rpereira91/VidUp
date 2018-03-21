@@ -17,33 +17,32 @@ export class SidebarComponent implements OnInit {
       {
         'title': 'Edit',
         'rows': [
-          {'title': 'Undo', 'icon': 'insert_emoticon'},
-          {'title': 'Redo', 'icon': 'insert_emoticon'},
-          {'title': 'Delete', 'icon': 'insert_emoticon'},
+          {'title': 'Undo', 'icon': 'undo'},
+          {'title': 'Redo', 'icon': 'redo'},
         ]
       },
       {
         'title': 'Tools',
         'rows': [
-          {'title': 'Select', 'icon': 'insert_emoticon'},
-          {'title': 'Trim', 'icon': 'insert_emoticon'},
-          {'title': 'Snap', 'icon': 'insert_emoticon'},
+          {'title': 'Select', 'icon': 'mouse'},
+          {'title': 'Trim', 'icon': 'content_cut'},
+          {'title': 'Snap', 'icon': 'camera_alt'},
         ]
       },
       {
         'title': 'Transitions',
         'rows': [
-          {'title': 'Undo', 'icon': 'insert_emoticon'},
-          {'title': 'Redo', 'icon': 'insert_emoticon'},
-          {'title': 'Delete', 'icon': 'insert_emoticon'},
+          {'title': 'Slide', 'icon': 'slideshow'},
+          {'title': 'Fade', 'icon': 'slideshow'},
+          {'title': 'Zoom in', 'icon': 'slideshow'},
         ]
       },
       {
         'title': 'Filters',
         'rows': [
-          {'title': 'Undo', 'icon': 'insert_emoticon'},
-          {'title': 'Redo', 'icon': 'insert_emoticon'},
-          {'title': 'Delete', 'icon': 'insert_emoticon'},
+          {'title': 'Black and white', 'icon': 'format_color_fill'},
+          {'title': 'Color Corrector', 'icon': 'format_color_fill'},
+          {'title': 'Blur', 'icon': 'format_color_fill'},
         ]
       }    
     ]

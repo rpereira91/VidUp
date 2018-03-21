@@ -3,6 +3,13 @@
     <div class="row tools">
         <button (click)="addVideo()"> <i class="fa fa-plus-square"></i></button>
         <button (click)="deleteVideo()"><i class="fa fa-trash" ></i></button>
+        <button (click)="prevVideo()"> <i class="fa fa-fast-backward"></i></button>
+        <button ><i class="fa fa-backward" ></i></button>
+        <button > <i class="fa fa-step-backward"></i></button>
+        <button ><i class="fa fa-pause" ></i></button>
+        <button > <i class="fa fa-step-forward"></i></button>
+        <button ><i class="fa fa-forward" ></i></button>
+        <button (click)="nextVideo()"> <i class="fa fa-fast-forward"></i></button>
     </div>
     <div class="row">
         <div *ngFor="let video of videos | slice:0:vid" class="col-sm-2">
