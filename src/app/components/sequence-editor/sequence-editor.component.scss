@@ -6,13 +6,25 @@ img {
     background-color: #3A3A3A;
 }
 .tools{
-    height: 25px;
+    height: 40px;
     margin-left: 0px;
+    margin-bottom: 9px;
 }
-
-button{
+i{
+    font-size: 35px;
     margin-left: 10px;
+    color: rgb(190, 190, 190);
 }
 .col-sm-2{
     margin-left: 5px;
+}
+i:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.play:hover .fa-pause,
+.play .fa-play {
+    display: none;
+}
+.play:hover .fa-play {
+    display: inline;
 }

@@ -1,15 +1,18 @@
 <!-- <div class="container"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="row tools">
-        <button (click)="addVideo()"> <i class="fa fa-plus-square"></i></button>
-        <button (click)="deleteVideo()"><i class="fa fa-trash" ></i></button>
-        <button (click)="prevVideo()"> <i class="fa fa-fast-backward"></i></button>
-        <button ><i class="fa fa-backward" ></i></button>
-        <button > <i class="fa fa-step-backward"></i></button>
-        <button ><i class="fa fa-pause" ></i></button>
-        <button > <i class="fa fa-step-forward"></i></button>
-        <button ><i class="fa fa-forward" ></i></button>
-        <button (click)="nextVideo()"> <i class="fa fa-fast-forward"></i></button>
+        <i (click)="addVideo()" class="fa fa-plus-square"></i>
+        <i (click)="deleteVideo()" class="fa fa-trash" ></i>
+        <i (click)="prevVideo()" class="fa fa-fast-backward"></i>
+        <i class="fa fa-backward" ></i>
+        <i class="fa fa-step-backward"></i>
+        <a href="#" class="play">
+            <i class="fa fa-pause" ></i>
+            <i class="fa fa-play" ></i>
+        </a>
+        <i class="fa fa-step-forward"></i>
+        <i class="fa fa-forward" ></i>
+        <i (click)="nextVideo()" class="fa fa-fast-forward"></i>
     </div>
     <div class="row">
         <div *ngFor="let video of videos | slice:0:vid" class="col-sm-2">
