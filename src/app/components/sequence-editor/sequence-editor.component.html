@@ -1,13 +1,12 @@
 <!-- <div class="container"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="row tools">
-        <button (click)="addVideo()"> <i class="fa fa-plus-square" style="font-size:48px;"></i></button>
-        <button (click)="deleteVideo()"><i class="fa fa-trash" style="font-size:48px;"></i></button>
+        <button (click)="addVideo()"> <i class="fa fa-plus-square"></i></button>
+        <button (click)="deleteVideo()"><i class="fa fa-trash" ></i></button>
     </div>
     <div class="row">
         <div *ngFor="let video of videos | slice:0:vid" class="col-sm-2">
             <img [src]="video.img" (click)="select(video)">
-            {{vid}}
         </div>
     </div>
 
