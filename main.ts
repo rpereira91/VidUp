@@ -139,7 +139,7 @@ const mainMenuTemplate =  [
               //CODE TODO
               dialog.showMessageBox({ type: "info",
                 message: "Undo move",
-                buttons: ["OK","Other"],
+                buttons: ["OK"],
                 detail: "Undo the last move\nImported files will be deleted, trimmed clips will be undone, etc" });
             }
           },
@@ -172,12 +172,20 @@ const mainMenuTemplate =  [
             label:'Trim',
             click(){
               //CODE TODO
+              dialog.showMessageBox({ type: "info",
+              message: "\"Trim\" tool selected",
+              buttons: ["OK"],
+              detail: "The trim tool can be used to fix the length of the video segments or the video as a whole" });
             }
           },
           {
             label:'Snapshot',
             click(){
               //CODE TODO
+              dialog.showMessageBox({ type: "info",
+              message: "\"Snapshot\" tool selected",
+              buttons: ["OK"],
+              detail: "Save a snapshot of the current video instance" });
             }
           },
           {
@@ -193,19 +201,50 @@ const mainMenuTemplate =  [
             }
           }
         ]
-      },{
+      }, {
+        label: 'Audio',
+        submenu: [
+            {
+                label: 'Adjust audio level',
+                click: function () {
+                    dialog.showMessageBox({ type: "info",
+                    message: "Adjust audio level menu",
+                    buttons: ["OK"],
+                    detail: "Fix the volume of the audio channels for current selected clip\nYou're able to use an audio clip to overwrite the clips audio" });
+                    //CODE TODO
+                }
+            },
+            {
+                label: 'Add audio',
+                click: function () {
+                    dialog.showMessageBox({ type: "info",
+                    message: "Add an audio clip",
+                    buttons: ["OK"],
+                    detail: "Adds an audio clip to sequence editor" });
+                    //CODE TODO
+                }
+            }
+        ]
+    },
+    {
         label: 'Extra',
         submenu:[
           {
             label:'Help',
             click(){
-              //CODE TODO
+              dialog.showMessageBox({ type: "info",
+              message: "Help",
+              buttons: ["OK"],
+              detail: "This is just a prototype, there is no functionality yet\nTo add a video click the  plus in the squence editor \nTo delete a video click the garbage bin\nTo make a thumbnail bigger click on it\nTo scroll through the videos press next and previous" });
             }
           },
           {
             label:'About',
             click(){
-              //CODE TODO
+              dialog.showMessageBox({ type: "info",
+              message: "About",
+              buttons: ["OK"],
+              detail: "Phase 1:\nPatrick Deshwal and Ralph Pereira" });
             }
           }
         ]
