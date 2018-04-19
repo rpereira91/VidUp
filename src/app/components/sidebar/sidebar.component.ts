@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {SidebarRow} from '../../models/sidebar-row';
 import {SidebarSection} from '../../models/sidebar-section';
-// const {dialog} = require('electron')
+
+import { app, BrowserWindow, screen, Menu, dialog} from 'electron';
+import * as path from 'path';
+import * as url from 'url';
 
 @Component({
   selector: 'app-sidebar',
@@ -50,7 +53,8 @@ export class SidebarComponent implements OnInit {
     
   }
   public undoPopUp(){
-    // dialog.showErrorBox("File Opened!","Opened previous projec");
+    dialog.showErrorBox("File Opened!","Opened previous projec");
+    // app.quit();
   }
 
 }
