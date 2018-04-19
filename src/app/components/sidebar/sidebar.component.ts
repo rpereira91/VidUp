@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SidebarRow} from '../../models/sidebar-row';
 import {SidebarSection} from '../../models/sidebar-section';
+// const {dialog} = require('electron')
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +10,7 @@ import {SidebarSection} from '../../models/sidebar-section';
 })
 export class SidebarComponent implements OnInit {
   sections: SidebarSection[];
-
+  
   constructor() {}
 
   ngOnInit() {
@@ -46,5 +47,10 @@ export class SidebarComponent implements OnInit {
         ]
       }    
     ]
+    
   }
+  public undoPopUp(){
+    // dialog.showErrorBox("File Opened!","Opened previous projec");
+  }
+
 }

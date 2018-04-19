@@ -1,5 +1,5 @@
 <div class="container">
-  <div *ngFor="let section of sections" class="section">
+  <!-- <div *ngFor="let section of sections" class="section">
     <div class="section-title">{{section.title}}</div>
     <div class="section-row" *ngFor="let row of section.rows">
       <div class="icon">
@@ -7,6 +7,18 @@
       </div>
       <div class="row-title">
         {{row.title}}
+      </div>
+    </div>
+  </div> -->
+
+  <div class="section">
+    <div class="section-title">Edit</div>
+      <div class="section-row">
+      <div class="icon">
+          <i class="material-icons" (click)="undoPopUp()">undo</i>
+      </div>
+      <div class="row-title">
+        Undo
       </div>
     </div>
   </div>
