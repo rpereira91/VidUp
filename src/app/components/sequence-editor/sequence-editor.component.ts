@@ -20,12 +20,9 @@ export class SequenceEditorComponent implements OnInit, AfterViewInit {
       this.videos = [
         this.createVideo('SzJ46YA_RaA'),
         this.createVideo('cSVDk-ugAQs'),
-        this.createVideo('i5qpS_D8Law'),
+        this.createVideo('B0NtAFf4bvU'),
         this.createVideo('KtvwustmEDI'),
         this.createVideo('i5qpS_D8Law'),
-        this.createVideo('KtvwustmEDI'),
-        this.createVideo('i5qpS_D8Law'),
-        this.createVideo('KtvwustmEDI'),
         this.createVideo('mP4AWwp-5qY')
       ]
   }

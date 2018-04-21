@@ -15,7 +15,7 @@
     <div class="section-title">Edit</div>
       <div class="section-row">
       <div class="icon">
-          <i class="material-icons" (click)="undoPopUp()">undo</i>
+          <i (click)="undoPopUp()" class="material-icons" >undo</i>
       </div>
       <div class="row-title">
         Undo
@@ -34,6 +34,7 @@
 
     <div class="section-title">Tools</div>
       <div class="section-row">
+      <span class="tooltiptext">A tool to select videos and drag them around</span>
       <div class="icon">
           <i class="material-icons" (click)="undoPopUp()">mouse</i>
       </div>
@@ -42,6 +43,7 @@
       </div>
     </div>
     <div class="section-row">
+        <span class="tooltiptext">A tool to used to trim the length of the video</span>        
       <div class="icon">
           <i class="material-icons" (click)="undoPopUp()">content_cut</i>
       </div>
@@ -50,6 +52,7 @@
       </div>
     </div>
     <div class="section-row">
+        <span class="tooltiptext">A tool that takes a snapshot of the current frame</span>     
       <div class="icon">
           <i class="material-icons" (click)="undoPopUp()">camera_alt</i>
       </div>
@@ -60,6 +63,7 @@
 
     <div class="section-title">Transitions</div>
     <div class="section-row">
+        <span class="tooltiptext">Add a slide transition between video clips</span>     
     <div class="icon">
         <i class="material-icons" (click)="undoPopUp()">slideshow</i>
     </div>
@@ -69,6 +73,7 @@
   </div>
 
   <div class="section-row">
+      <span class="tooltiptext">Zoom into the first clip and zoom back out into the second clip</span>     
     <div class="icon">
         <i class="material-icons" (click)="undoPopUp()">slideshow</i>
     </div>
@@ -78,6 +83,7 @@
   </div>
 
   <div class="section-row">
+      <span class="tooltiptext">Fade out of the old clip and fade into the new clip</span>     
     <div class="icon">
         <i class="material-icons" (click)="undoPopUp()">slideshow</i>
     </div>
@@ -88,6 +94,7 @@
 
     <div class="section-title">Filters</div>
     <div class="section-row">
+    <span class="tooltiptext">Make the current clip black and white</span>  
     <div class="icon">
         <i class="material-icons" (click)="undoPopUp()">format_color_fill</i>
     </div>
@@ -97,18 +104,19 @@
   </div>
 
   <div class="section-row">
+    <span class="tooltiptext">Add a tint to the current clip</span>  
     <div class="icon">
         <i class="material-icons" (click)="undoPopUp()">format_color_fill</i>
     </div>
     <div class="row-title">
-      Color Correction
+      Color Tint
     </div>
   </div>
 
   <div class="section-row">
     <div class="icon">
         <i class="material-icons" (click)="undoPopUp()">format_color_fill</i>
-    </div> <br>
+    </div>
     <div class="row-title">
       Gaussian Blur
     </div>

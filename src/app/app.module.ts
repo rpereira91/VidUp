@@ -23,6 +23,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { VideoComponent } from './components/video/video.component';
 import { SequenceEditorComponent } from './components/sequence-editor/sequence-editor.component';
 
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

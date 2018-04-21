@@ -102,7 +102,7 @@ const mainMenuTemplate =  [
         },
         {
           label:'Import video',
-          accelerator: 'Ctrl+Alt+I',
+          accelerator: 'Ctrl+I',
           click(){
             //CODE TODO
             createOpenWindow();  
@@ -111,6 +111,7 @@ const mainMenuTemplate =  [
         },
         {
             label:'Export Video',
+            accelerator: 'Ctrl+E',
             click(){
               //CODE TODO
               dialog.showMessageBox({ type: "info",
@@ -123,7 +124,7 @@ const mainMenuTemplate =  [
           },
         {
           label: 'Quit',
-          accelerator: 'Ctrl+Q',
+          accelerator: 'Ctrl+Alt+Q',
           click(){
             app.quit();
           }
