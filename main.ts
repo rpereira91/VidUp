@@ -78,8 +78,9 @@ const mainMenuTemplate =  [
           accelerator: 'Ctrl+N',
           click(){
             //CODE TODO
-            createNewWindow();
-            dialog.showErrorBox("New project started!","New project");
+            dialog.showMessageBox({ type: "info",
+            message: "New project started",
+            detail: "Select where you want to save the file in the local directory" });
           }
         },
         {
@@ -87,8 +88,9 @@ const mainMenuTemplate =  [
           accelerator: 'Ctrl+O',
           click(){
             //CODE TODO
-            createOpenWindow();  
-            dialog.showErrorBox("File Opened!","Opened previous projec");
+            dialog.showMessageBox({ type: "info",
+            message: "File Opened!",
+            detail: "Opened previous project" });
         }
         },
         {
@@ -96,8 +98,9 @@ const mainMenuTemplate =  [
           accelerator: 'Ctrl+S',
           click(){
             //CODE TODO
-            createNewWindow();
-            dialog.showErrorBox("File Saved!","Saved file");
+            dialog.showMessageBox({ type: "info",
+            message: "File Saved!",
+            detail: "Select where you want to save the file to" });
           }
         },
         {
@@ -105,8 +108,9 @@ const mainMenuTemplate =  [
           accelerator: 'Ctrl+I',
           click(){
             //CODE TODO
-            createOpenWindow();  
-            dialog.showErrorBox("Video imported!","The imported video will be added to the sequence editor");
+            dialog.showMessageBox({ type: "info",
+            message: "Video imported!",
+            detail: "The imported video will be added to the sequence editor" });
           }
         },
         {
@@ -119,7 +123,8 @@ const mainMenuTemplate =  [
               buttons: ["Hi-Res","Space-saving","Facebook","Instagram","YouTube","GIF"],
               detail: "Select one of the following pre-sets for the video" });
               createNewWindow();
-              dialog.showErrorBox("Video Exported!","The exported video will be created in the seclected directory.");
+              dialog.showMessageBox({ type: "info",
+              message: "Video Exported!"});
             }
           },
         {
@@ -193,6 +198,11 @@ const mainMenuTemplate =  [
             label:'Filter Menu',
             click(){
               //CODE TODO
+
+              dialog.showMessageBox({ type: "info",
+              message: "Select a filter to use",
+              buttons: ["Black and White", "Color Tint","Gaussian Blur"],
+              detail: "Save a snapshot of the current video instance" });
             }
           },
           {

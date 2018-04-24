@@ -53,10 +53,12 @@ export class SidebarComponent implements OnInit {
     
   }
   public undoPopUp(){
-    const {dialog} = require('electron')
-    
-    dialog.showErrorBox("File Opened!","Opened previous projec");
-    // app.quit();
+    require('electron').remote.dialog.showMessageBox({
+      type: "question",
+      buttons: ["OK", "Cancel"],
+      message: "This is a test.",
+      checkboxLabel: "Do not show this message again."  
+    }, function (...args) { console.log(...args) })
   }
 
 }
