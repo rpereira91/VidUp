@@ -5,6 +5,9 @@ img {
 .row{
     background-color: #3A3A3A;
 }
+.video{
+    margin-right: 10px;
+}
 .tools{
     height: 40px;
     margin-left: 0px;
@@ -16,10 +19,11 @@ i{
     color: rgb(190, 190, 190);
 }
 .col-sm-2{
-    margin-left: 5px;
+    margin-left: 2px;
 }
 i:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color: rgb(107, 183, 255);
 }
 .play:hover .fa-pause,
 .play .fa-play {

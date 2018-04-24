@@ -131,6 +131,10 @@ const mainMenuTemplate =  [
           label: 'Quit',
           accelerator: 'Ctrl+Alt+Q',
           click(){
+            dialog.showMessageBox({ type: "info",
+            message: "Save Un-Saved Data?",
+            buttons:["Save","Don't Close","Close"],
+            detail: "" });
             app.quit();
           }
         }

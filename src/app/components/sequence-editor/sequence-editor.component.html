@@ -16,7 +16,9 @@
     </div>
     <div class="row">
         <div *ngFor="let video of videos | slice:0:vid" class="col-sm-2">
-            <img [src]="video.img" (click)="select(video)">
+            <div class="video">
+                <img [src]="video.img" (click)="select(video)">     
+            </div>
         </div>
     </div>
 
