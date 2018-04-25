@@ -2,6 +2,7 @@
   <!-- <div *ngFor="let section of sections" class="section">
     <div class="section-title">{{section.title}}</div>
     <div class="section-row" *ngFor="let row of section.rows">
+      <span class="tooltiptext">A tool to select videos and drag them around</span>
       <div class="icon">
         <i class="material-icons">{{row.icon}}</i>
       </div>
@@ -75,7 +76,7 @@
   <div class="section-row">
       <span class="tooltiptext">Zoom into the first clip and zoom back out into the second clip</span>     
     <div class="icon">
-        <i class="material-icons" (click)="undoPopUp()">slideshow</i>
+        <i class="material-icons" (click)="undoPopUp()">zoom_in</i>
     </div>
     <div class="row-title">
       Zoon Im
@@ -85,7 +86,7 @@
   <div class="section-row">
       <span class="tooltiptext">Fade out of the old clip and fade into the new clip</span>     
     <div class="icon">
-        <i class="material-icons" (click)="undoPopUp()">slideshow</i>
+        <i class="material-icons" (click)="undoPopUp()">forward</i>
     </div>
     <div class="row-title">
       Fade In
@@ -96,7 +97,7 @@
     <div class="section-row">
     <span class="tooltiptext">Make the current clip black and white</span>  
     <div class="icon">
-        <i class="material-icons" (click)="undoPopUp()">format_color_fill</i>
+        <i class="material-icons" (click)="undoPopUp()">invert_colors</i>
     </div>
     <div class="row-title">
       Black and White
@@ -114,14 +115,30 @@
   </div>
 
   <div class="section-row">
+    <span class="tooltiptext">The Video is blurred by a Gaussian function</span>
     <div class="icon">
-        <i class="material-icons" (click)="undoPopUp()">format_color_fill</i>
+        <i class="material-icons" (click)="undoPopUp()">blur_linear</i>
     </div>
     <div class="row-title">
       Gaussian Blur
     </div>
   </div>
 
-
+  <div class="section-title">Volume</div>
+  <div class="section-row"> 
+  <div class="icon">
+      <i class="material-icons" (click)="undoPopUp()">volume_up</i>
+  </div>
+  <div class="row-title">
+    Main Volume
+  </div>
+      <div class="slidercont">
+          <div class = "volume">
+            {{volume}}
+          </div>
+               <input #mainVolume type="range" min="1" max="100" value="50" class="slider" id="myRange" (click)="volumeChange()">
+               
+      </div>
+  </div>
   </div>
 </div>

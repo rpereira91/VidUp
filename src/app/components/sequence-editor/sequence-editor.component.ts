@@ -12,7 +12,7 @@ import { Video } from '../../models/video'
 export class SequenceEditorComponent implements OnInit, AfterViewInit {
     @Output() onSelected =  new EventEmitter<Video>();
   videos: Video[];
-  vid: number = 1;
+  vid: number = 0;
   currentVid: number = 0;
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -49,6 +49,9 @@ export class SequenceEditorComponent implements OnInit, AfterViewInit {
   public deleteVideo(){
     if(this.vid > 0){
       this.vid -= 1;
+      if( this.currentVid > this.vid){
+        this.currentVid = this.vid;
+      }
     }
   }
   public createVideo(id: String): Video{

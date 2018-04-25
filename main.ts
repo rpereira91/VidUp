@@ -170,6 +170,7 @@ const mainMenuTemplate =  [
         submenu:[
           {
             label:'Select',
+            accelerator: 'Ctrl+Shift+E',
             click(){
               dialog.showMessageBox({ type: "info",
                 message: "\"Select\" tool selected",
@@ -180,6 +181,7 @@ const mainMenuTemplate =  [
           },
           {
             label:'Trim',
+            accelerator: 'Ctrl+Shift+T',
             click(){
               //CODE TODO
               dialog.showMessageBox({ type: "info",
@@ -190,6 +192,7 @@ const mainMenuTemplate =  [
           },
           {
             label:'Snapshot',
+            accelerator: 'Ctrl+Shift+H',
             click(){
               //CODE TODO
               dialog.showMessageBox({ type: "info",
@@ -251,6 +254,7 @@ const mainMenuTemplate =  [
               message: "Help",
               buttons: ["OK"],
               detail: "This is just a prototype, there is no functionality yet\nTo add a video click the  plus in the squence editor \nTo delete a video click the garbage bin\nTo make a thumbnail bigger click on it\nTo scroll through the videos press next and previous" });
+              // mainMenu.popup
             }
           },
           {

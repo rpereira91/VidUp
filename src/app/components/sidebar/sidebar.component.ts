@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild,ElementRef} from '@angular/core';
 import {SidebarRow} from '../../models/sidebar-row';
 import {SidebarSection} from '../../models/sidebar-section';
 
@@ -12,16 +12,18 @@ import * as url from 'url';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  @ViewChild('mainVolume') input:ElementRef; 
   sections: SidebarSection[];
-  
+  volume: number = 50;
   constructor() {}
 
   ngOnInit() {
+    this.volume = this.input.nativeElement.value;   
     this.sections = [
       {
         'title': 'Edit',
         'rows': [
-          {'title': 'Undo', 'icon': 'undo'},
+          {'title': 'Undo', 'icon': 'undo',},
           {'title': 'Redo', 'icon': 'redo'},
         ]
       },
@@ -52,13 +54,13 @@ export class SidebarComponent implements OnInit {
     ]
     
   }
-  public undoPopUp(){
-    require('electron').remote.dialog.showMessageBox({
-      type: "question",
-      buttons: ["OK", "Cancel"],
-      message: "This is a test.",
-      checkboxLabel: "Do not show this message again."  
-    }, function (...args) { console.log(...args) })
+  ngOnChanges(){
+    this.volume = this.input.nativeElement.value;       
   }
-
+  public volumeChange(){
+    this.volume = this.input.nativeElement.value;   
+  }
+  public undoPopUp(){
+    console.log(this.input.nativeElement.value);    
+  }
 }
