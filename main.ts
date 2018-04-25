@@ -57,9 +57,6 @@ function createWindow() {
 
 //new window
 function createNewWindow(){
-    // dialog.showSaveDialog((fileNames) => {
-
-    // });
   }
 //open
   function createOpenWindow(){
@@ -121,10 +118,30 @@ const mainMenuTemplate =  [
               dialog.showMessageBox({ type: "info",
               message: "Select Video Preset",
               buttons: ["Hi-Res","Space-saving","Facebook","Instagram","YouTube","GIF"],
-              detail: "Select one of the following pre-sets for the video" });
-              createNewWindow();
-              dialog.showMessageBox({ type: "info",
-              message: "Video Exported!"});
+              detail: "Select one of the following pre-sets for the video", },
+            function (buttonIndex){      
+              if (buttonIndex == 2){
+                let win = new BrowserWindow({width: 800, height: 600})              
+                win.on('closed', () => {
+                  win = null
+                })
+                win.loadURL('https://facebook.com')
+              }
+              if (buttonIndex == 3){
+                let win = new BrowserWindow({width: 800, height: 600})              
+                win.on('closed', () => {
+                  win = null
+                })
+                win.loadURL('https://instagram.com')
+              }
+              if (buttonIndex == 4){
+                let win = new BrowserWindow({width: 800, height: 600})              
+                win.on('closed', () => {
+                  win = null
+                })
+                win.loadURL('https://youtube.com')
+              }
+            });
             }
           },
         {
@@ -133,9 +150,23 @@ const mainMenuTemplate =  [
           click(){
             dialog.showMessageBox({ type: "info",
             message: "Save Un-Saved Data?",
-            buttons:["Save","Don't Close","Close"],
-            detail: "" });
-            app.quit();
+            buttons:["Save and Exit","Don't Exit","Exit without saving"],
+            detail: "" },
+          function (buttonIndex){
+            if (buttonIndex == 0){
+              dialog.showMessageBox({ type: "info",
+              message: "File Saved!",
+              detail: "Select where you want to save the file to" });
+              app.quit();
+            }
+            if (buttonIndex == 1){
+
+            }
+            if (buttonIndex == 2){
+              app.quit();
+            }
+          });
+            
           }
         }
       ]
