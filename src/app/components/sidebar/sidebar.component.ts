@@ -2,8 +2,8 @@ import {Component, OnInit, ViewChild,ElementRef} from '@angular/core';
 import {SidebarRow} from '../../models/sidebar-row';
 import {SidebarSection} from '../../models/sidebar-section';
 
-import * as path from 'path';
-import * as url from 'url';
+// import * as path from 'path';
+// import * as url from 'url';
 
 
 @Component({
@@ -61,6 +61,13 @@ export class SidebarComponent implements OnInit {
     this.volume = this.input.nativeElement.value;   
   }
   public undoPopUp(){
+<<<<<<< Updated upstream
     console.log(this.input.nativeElement.value);    
+=======
+    // const {dialog} = require('electron')
+    
+    // dialog.showErrorBox("File Opened!","Opened previous projec");
+    // // app.quit();
+>>>>>>> Stashed changes
   }
 }
