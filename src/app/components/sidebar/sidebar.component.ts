@@ -61,13 +61,5 @@ export class SidebarComponent implements OnInit {
     this.volume = this.input.nativeElement.value;   
   }
   public undoPopUp(){
-<<<<<<< Updated upstream
-    console.log(this.input.nativeElement.value);    
-=======
-    // const {dialog} = require('electron')
-    
-    // dialog.showErrorBox("File Opened!","Opened previous projec");
-    // // app.quit();
->>>>>>> Stashed changes
   }
 }
