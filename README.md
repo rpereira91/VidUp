@@ -1,1 +1,1 @@
-Electron App
+Video editor prototype
